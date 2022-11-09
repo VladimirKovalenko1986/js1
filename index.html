@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const season = 'summer';
+
+            if (season === 'winter') {
+                consol.log('Зима');
+
+                [1, 2, 3, 4, 5].forEach(number => {
+                    consol.log(number);
+                });
+            } else if (season === 'summer') {
+                console.log('Лето');
+            } else if (season === 'autumn') {
+                console.log('Осень');
+            } else if (season === 'spring') {
+                console.log('Весна');
+            } else {
+                console.log('Это что за ерунда в переменной?');
+            }
+        </script>
+    </body>
 </html>
