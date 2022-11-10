@@ -34,7 +34,36 @@ const quantity = 10;
 const orderMsg = `вы заказываете ${quantity} холодильников`;
 // console.log(`qwq qwq wqwq  qw qwqwqwq ${5 + 5}`);
 // ставим косые кавычки и пишем произвольную строку но сюда можно подставлять динамически е значения через $
-console.log(orderMsg);
+// console.log(orderMsg);
 
 const welcomeMsg = `Гость ${firstName} ${lastName} поселяется в ${type} номер ${room}`;
-console.log(welcomeMsg);
+// console.log(welcomeMsg);
+
+// Делаем для того чтобы слова поиска привели до общего значения
+
+// const brand = 'Samsung';
+// const normalizedBrand = brand.toLowerCase();
+// console.log(normalizedBrand);
+
+let brand = 'Samsung';
+brand = brand.toLowerCase();
+// console.log(brand);
+
+// Поиск в строке методом includes()
+
+const blacklistedWord1 = 'спам';
+const blacklistedWord2 = 'распрадажа';
+
+const string1 = 'Привет, я принц Абдул, это не спам, предлогаю тебе миллион!';
+const string2 = 'самая больша РАСПРАДАЖА этой недели, не пропустите!';
+const string3 = 'Рекланая кампния #fatlivesmastter';
+
+// console.log(string1.includes(blacklistedWord1));
+// console.log(string1.includes(blacklistedWord2));
+
+// console.log(string2.includes(blacklistedWord1));
+// const normalizedString2 = string2.toLowerCase();
+// console.log(normalizedString2.includes(blacklistedWord2));
+
+// console.log(string3.includes(blacklistedWord1));
+// console.log(string3.includes(blacklistedWord2));
