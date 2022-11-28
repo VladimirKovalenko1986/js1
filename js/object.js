@@ -324,22 +324,176 @@ const friends = [
 
 // Делаем корзину товаров
 
-const cart = {
-    item: [],
-    getItems() {},
-    add(product) {},
-    remove(productName) {},
-    clear() {},
-    countTotalPrice() {},
-    increaseQuantity(productName) {},
-    decreaseQuantity(productName) {},
-};
+// const cart = {
+//     items: [],
 
-console.table(cart.getItems());
+//     getItems() {
+//         return this.items;
+//     },
 
-cart.add({ name: 'Яблоко', price: 50 });
-cart.add({ name: 'Лимон', price: 60 });
-cart.add({ name: 'Абрикос', price: 60 });
-cart.add({ name: 'Мандарин', price: 110 });
+//     add(product) {
+//         for (const item of this.items) {
+//             if (item.name === product.name) {
+//                 item.quantity += 1;
 
-console.table(cart.getItems());
+//                 return;
+//             }
+//         }
+
+//         const newProduct = {
+//             ...product,
+//             quantity: 1,
+//         };
+//         this.items.push(newProduct);
+//     },
+//     remove(productName) {
+//         const { items } = this;
+
+//         for (let i = 0; i < items.length; i += 1) {
+//             const { name } = items[i];
+
+//             console.log(this.items[i]);
+
+//             if (productName === name) {
+//                 console.log('Нашли такой продукт:', productName);
+//                 console.log('Индекс:', i);
+
+//                 items.splice(i, 1);
+//             }
+//         }
+//     },
+
+//     clear() {
+//         this.items = [];
+//     },
+
+//     countTotalPrice() {
+//         const { items } = this;
+//         let total = 0;
+
+//         for (const { price, quantity } of items) {
+//             total += price * quantity;
+//         }
+
+//         return total;
+//     },
+
+//     increaseQuantity(productName) {},
+
+//     decreaseQuantity(productName) {},
+// };
+
+// // console.log(cart.getItems());
+
+// cart.add({ name: 'Яблоко', price: 50 });
+// cart.add({ name: 'Лимон', price: 60 });
+// cart.add({ name: 'Лимон', price: 60 });
+// cart.add({ name: 'Абрикос', price: 60 });
+// cart.add({ name: 'Мандарин', price: 110 });
+// cart.add({ name: 'Мандарин', price: 110 });
+// cart.add({ name: 'Мандарин', price: 110 });
+
+// console.table(cart.getItems());
+
+// console.log('Total:', cart.countTotalPrice());
+
+// cart.remove('Абрикос');
+// console.table(cart.getItems());
+
+// cart.clear();
+// console.log(cart.getItems());
+
+// !===========================================================================================
+// Операция spread распыление
+
+// Array.prototype.concat(); и аналог через spread
+
+// const numbers = [1, 2, 3].concat([4, 5, 6], [6, 7, 8]);
+
+// console.log(numbers);
+
+// const numbers = [...[1, 2, 3], ...[4, 5, 6], ...[7, 8, 9]];
+
+// console.log(numbers);
+
+// !===========================================================================================
+
+// Поиск самой маленькой и большой температуры
+
+// const temps = [18, 14, 12, 21, 17, 29, 24];
+
+// console.log(Math.max(...temps));
+
+// console.log(Math.min(...temps));
+
+// !===========================================================================================
+
+// Сшиваем несколько массивов в один через concat и spread
+
+// const lastWeekTemps = [1, 2, 3];
+// const currentWeekTemps = [4, 5, 6];
+// const nextWeekTemps = [7, 8, 9];
+
+// const allTemps = [...lastWeekTemps, ...currentWeekTemps, ...nextWeekTemps];
+// console.log(allTemps);
+
+// !===========================================================================================
+
+// Распыление обьектов
+
+// const a = { x: 1, y: 2 };
+// const b = { x: 0, z: 3 };
+
+// // const c = Object.assign({}, a, b);
+
+// const c = {
+//     ...a,
+//     ...b,
+// };
+
+// console.log(c);
+
+// !===========================================================================================
+
+// Деструктуризация обтектов
+
+// const playlist = {
+//     name: 'Мой супер плей лист',
+//     rating: 5,
+//     tracks: ['трек - 1', 'трек - 2', 'трек - 3'],
+//     trackCount: 3,
+// };
+
+// const { rating, tracks, name, trackCount } = playlist;
+
+// console.log(name, rating, tracks, trackCount);
+
+// !===========================================================================================
+
+// Патерн обьекта
+
+// const showProfileInfo = function (userProfile) {
+//     const {
+//         name,
+//         tag,
+//         location,
+//         avatar,
+//         stats: { followers, views, likes },
+//     } = userProfile;
+
+//     console.log(name, tag, location, avatar, followers, views, likes);
+// };
+
+// const profile = {
+//     name: 'Jacki Chan',
+//     tag: 'jgluk',
+//     location: 'Ocho Rios Jamaica',
+//     avatar: 'https://github.com/goitacademy/js-instructor-examples/blob/main/lesson-05/uk.md',
+//     stats: {
+//         followers: 5603,
+//         views: 4827,
+//         likes: 1308,
+//     },
+// };
+
+// showProfileInfo(profile);
