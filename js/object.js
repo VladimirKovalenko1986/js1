@@ -197,12 +197,12 @@
 
 // !===========================================================================================
 
-const friends = [
-    { name: 'Mango', online: false },
-    { name: 'Kiwi', online: true },
-    { name: 'Poly', online: true },
-    { name: 'Ajax', online: false },
-];
+// const friends = [
+//     { name: 'Mango', online: false },
+//     { name: 'Kiwi', online: true },
+//     { name: 'Poly', online: true },
+//     { name: 'Ajax', online: false },
+// ];
 
 // console.table(friends);
 
