@@ -127,7 +127,7 @@
 // refs.nameLabel.textContent = event.currentTarget.value;
 // }
 
-// делаем кнопку активной при нажатии секбокс
+// делаем кнопку активной при нажатии чекбокс
 
 // function onLicenseChange(event) {
 //     console.log(event.currentTarget.checked);
