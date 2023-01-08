@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <!-- !!!!!Болтливые событи -->
+        <!-- <p class="js-coords">Количество вызовов onMouseMove: 0</p>
+
+        <hr />
+
+        <input type="text" class="js-input" />
+        <p class="js-output">Количество вызовов onInputChange: 0</p> -->
+
+        <!-- !!!!!Фильтр с поиском -->
+
+        <!-- <label>
+            Что ищем?
+            <input type="text" id="filter" />
+        </label>
+
+        <ul class="js-list"></ul> -->
+
+        <!-- !!!!!ленивая загрузка изображений -->
+
+        <ul class="feed">
+            <li class="feed__item">
+                <!-- ???????????Если мы подключаем библиотеку по изображению то  loading="lazy" не указываем-->
+                <!-- <img
+                    loading="lazy"
+                    src="https://i.pinimg.com/originals/d2/0c/36/d20c3646f82a23acbd4f555d722ebc1e.jpg"
+                    alt="House and trees"
+                    width="640"
+                    height="480"
+                /> -->
+                <!-- Добавляем  loading="lazy" для того чтобы выборочно прописать под браузер без библиотеки-->
+                <img
+                    loading="lazy"
+                    class="lazyload"
+                    data-src="https://i.pinimg.com/originals/d2/0c/36/d20c3646f82a23acbd4f555d722ebc1e.jpg"
+                    alt="House and trees"
+                    width="640"
+                    height="480"
+                />
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Eveniet vel natus quo expedita nostrum cum soluta dolorum
+                    consequatur commodi, vitae delectus assumenda quis harum
+                    maxime sequi similique temporibus atque aspernatur.
+                </p>
+            </li>
+            <li class="feed__item">
+                <img
+                    loading="lazy"
+                    class="lazyload"
+                    data-src="https://i.pinimg.com/750x/8e/30/68/8e30684f114b7008b4a14734162586fb.jpg"
+                    alt="Сoast and sea"
+                    width="640"
+                    height="480"
+                />
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptas soluta totam qui, perspiciatis similique atque rem
+                    magni neque sit cum quia quam non ea eum, nisi odit corporis
+                    doloremque quis ratione, voluptates dolores aperiam tempora
+                    provident molestiae. Quam, dolore optio!
+                </p>
+            </li>
+            <li class="feed__item">
+                <img
+                    loading="lazy"
+                    class="lazyload"
+                    data-src="https://i.pinimg.com/750x/32/78/6b/32786be08a7395ac0cfb90469bf526c5.jpg"
+                    alt="Lock"
+                    width="640"
+                    height="480"
+                />
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse obcaecati numquam nihil non reiciendis id facere alias
+                    qui quibusdam, itaque illum temporibus modi repellat porro a
+                    pariatur dolorem! Illum dignissimos nostrum iure et
+                    inventore beatae ut sapiente minus ipsum, repellat
+                    aspernatur magni quos perferendis amet eos soluta in
+                    pariatur molestias.
+                </p>
+            </li>
+            <li class="feed__item">
+                <img
+                    loading="lazy"
+                    class="lazyload"
+                    data-src="https://i.pinimg.com/750x/8d/b1/63/8db16332f3e9fb07eae6147ba1714399.jpg"
+                    alt="Houses on the coast"
+                    width="640"
+                    height="480"
+                />
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Assumenda tenetur ullam magnam fugit perspiciatis cupiditate
+                    omnis voluptates laborum labore odio quasi, repellat aut
+                    laboriosam praesentium quisquam, hic a! Laudantium, omnis
+                    quos neque, aperiam quas voluptatem doloribus, sapiente
+                    repellendus illo itaque debitis nulla rem assumenda tempore
+                    accusantium! Assumenda adipisci soluta consequatur maxime
+                    reiciendis ut dolores laudantium.
+                </p>
+            </li>
+            <li class="feed__item">
+                <img
+                    loading="lazy"
+                    class="lazyload"
+                    data-src="https://i.pinimg.com/750x/32/78/6b/32786be08a7395ac0cfb90469bf526c5.jpg"
+                    alt="Desert"
+                    width="640"
+                    height="480"
+                />
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Debitis hic nesciunt eligendi ullam error, nobis veniam!
+                    Est, tenetur? Omnis incidunt nisi dolore delectus aperiam
+                    rerum vitae esse quam sequi voluptatibus provident,
+                    dignissimos quas ipsum temporibus necessitatibus culpa
+                    reprehenderit dolores eligendi voluptate. Magnam, recusandae
+                    quisquam provident nemo, eligendi excepturi libero quaerat
+                    quia, eum quo odio numquam nam? Excepturi temporibus
+                    repudiandae neque?
+                </p>
+            </li>
+
+            <li class="feed__item">
+                <img
+                    loading="lazy"
+                    class="lazyload"
+                    data-src="https://i.pinimg.com/750x/83/09/38/83093812c99403d9d6a75a923609c74c.jpg"
+                    alt="Desert"
+                    width="640"
+                    height="480"
+                />
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Debitis hic nesciunt eligendi ullam error, nobis veniam!
+                    Est, tenetur? Omnis incidunt nisi dolore delectus aperiam
+                    rerum vitae esse quam sequi voluptatibus provident,
+                    dignissimos quas ipsum temporibus necessitatibus culpa
+                    reprehenderit dolores eligendi voluptate. Magnam, recusandae
+                    quisquam provident nemo, eligendi excepturi libero quaerat
+                    quia, eum quo odio numquam nam? Excepturi temporibus
+                    repudiandae neque?
+                </p>
+            </li>
+
+            <li class="feed__item">
+                <img
+                    loading="lazy"
+                    class="lazyload"
+                    data-src="https://i.pinimg.com/originals/f2/a7/dd/f2a7ddceea23194bb40e943f5bde349d.jpg"
+                    alt="Desert"
+                    width="640"
+                    height="480"
+                />
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Debitis hic nesciunt eligendi ullam error, nobis veniam!
+                    Est, tenetur? Omnis incidunt nisi dolore delectus aperiam
+                    rerum vitae esse quam sequi voluptatibus provident,
+                    dignissimos quas ipsum temporibus necessitatibus culpa
+                    reprehenderit dolores eligendi voluptate. Magnam, recusandae
+                    quisquam provident nemo, eligendi excepturi libero quaerat
+                    quia, eum quo odio numquam nam? Excepturi temporibus
+                    repudiandae neque?
+                </p>
+            </li>
+
+            <li class="feed__item">
+                <img
+                    loading="lazy"
+                    class="lazyload"
+                    data-src="https://bipbap.ru/wp-content/uploads/2017/04/0_7c779_5df17311_orig.jpg"
+                    alt="Desert"
+                    width="640"
+                    height="480"
+                />
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Debitis hic nesciunt eligendi ullam error, nobis veniam!
+                    Est, tenetur? Omnis incidunt nisi dolore delectus aperiam
+                    rerum vitae esse quam sequi voluptatibus provident,
+                    dignissimos quas ipsum temporibus necessitatibus culpa
+                    reprehenderit dolores eligendi voluptate. Magnam, recusandae
+                    quisquam provident nemo, eligendi excepturi libero quaerat
+                    quia, eum quo odio numquam nam? Excepturi temporibus
+                    repudiandae neque?
+                </p>
+            </li>
+        </ul>
+        <!-- !!!!Подключение билиотеки по работе изображения lazysizes-->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script> -->
+
+        <!-- !!!!!!Подключаем lodash -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+        <script src="./js/imege.js" type="module"></script>
+    </body>
+</html>
